@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css">
+    <script>
+        function validateForm() {
+            var firstName = document.getElementById("first-name").value;
+            var middleName = document.getElementById("middle-name").value;
+            var lastName = document.getElementById("last-name").value;
+            var Gender = document.getElementById("Gender").value;
+            var phoneNumber = document.getElementById("phone-number").value;
+            var zNumber = document.getElementById("z-number").value;
+            var email = document.getElementById("email").value;
+            var resume = document.getElementById("resume").value;
+
+            if (firstName === "" || middleName === "" || lastName === "" || Gender === "" || phoneNumber === "" || zNumber === "" ||  email === "" || resume === "") {
+                alert("All fields are required!");
+                return false;
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-image: url('Clgbgm.jpg'); /* Replace 'background-image.jpg' with the path to your image */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Do not repeat the background image */
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .input-box select,
+        .input-box input[type="text"],
+        .input-box input[type="date"],
+        .input-box input[type="email"],
+        .input-box select {
+            width: 100%; /* Maximized width */
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+        }
+
+        .phone-inputs {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .checkbox-label {
+            font-size: 14px;
+            margin-left: 8px;
+        }
+
+        /* Custom style for checkbox */
+        .checkbox-custom {
+            transform: scale(0.5); /* Adjust the scale as needed */
+            margin: 0;
+        }
+
+        /* Increase text area size */
+        #resume {
+            height: 100px; /* Adjust the height as needed */
+            resize: vertical; /* Allow vertical resizing */
+        }
+    </style>
+</head>
+<body>
+<div class="page-container">
+    <div class="character-container">
+        <img src="Manpointing.jpg" alt="Character">
+    </div>
+    <div class="container">
+        <div class="title"></div>
+        <form action="#" onsubmit="return validateForm()">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">First Name</span>
+                    <input type="text" id="first-name" placeholder="Enter your first name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Middle Name</span>
+                    <input type="text" id="middle-name" placeholder="Enter your middle name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Last Name</span>
+                    <input type="text" id="last-name" placeholder="Enter your last name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Gender</span> <!-- Added: Gender field -->
+                    <select id="gender" required>
+                        <option value="">Select your gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="input-box phone-inputs">
+                    <span class="details">Phone Number</span>
+                    <div class="phone-fields">
+                        <select id="country-code">
+                            <option value="+1">USA (+1)</option>
+                            <option value="+44">UK (+44)</option>
+                            <option value="+91">India (+91)</option>
+                            <option value="+86">China (+86)</option>
+                            <option value="+81">Japan (+81)</option>
+                            <option value="+49">Germany (+49)</option>
+                            <option value="+33">France (+33)</option>
+                            <option value="+61">Australia (+61)</option>
+                        </select>
+                        <input type="text" id="phone-number" placeholder="Enter your phone number" required>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <span class="details">Z number</span>
+                    <input type="text" id="z-number" placeholder="Enter your Z number" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Date of Birth</span>
+                    <input type="date" id="date-of-birth" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Courses</span>
+                    <select id="courses" required>
+                        <option value="">Select a course</option>
+                        <option value="CAP 5615 Introduction to Neural Networks">CAP 5615 Introduction to Neural Networks</option>
+                        <option value="CAP 5625 Computational Foundations of Artificial Intelligence">CAP 5625 Computational Foundations of Artificial Intelligence</option>
+                        <option value="CAP 5768 Introduction to Data Science">CAP 5768 Introduction to Data Science</option>
+                        <option value="CAP 6619 Deep Learning">CAP 6619 Deep Learning</option>
+                        <option value="CAP 6640 Natural Language Processing">CAP 6640 Natural Language Processing</option>
+                        <option value="CEN 5035 Software Engineering">CEN 5035 Software Engineering</option>
+                        <option value="CEN 5086 Cloud Computing">CEN 5086 Cloud Computing</option>
+                        <option value="CIS 6370 Computer Data Security">CIS 6370 Computer Data Security</option>
+                        <option value="COP 6731 Theory and Implementation of Database Systems">COP 6731 Theory and Implementation of Database Systems</option>
+                        <option value="COT 6405 Analysis of Algorithms">COT 6405 Analysis of Algorithms</option>
+                        <option value="COT 5930 Digital Image Processing">COT 5930 Digital Image Processing</option>
+                        <option value="CAP 6776 Information Retrieval">CAP 6776 Information Retrieval</option>
+                        <option value="CDA 5326 Cryptographic Engineering">CDA 5326 Cryptographic Engineering</option>
+                        <option value="CDA 6132 Multiprocessor Architecture">CDA 6132 Multiprocessor Architecture</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="previously-ta" class="checkbox-custom" onchange="showTaDates()">
+                        <label for="previously-ta" class="checkbox-label">Previously served as a TA at North University</label>
+                    </div>
+                </div>
+                <div id="ta-dates" style="display:none;">
+                    <div class="input-box">
+                        <span class="details">Start Date</span>
+                        <input type="date" id="ta-start-date">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">End Date</span>
+                        <input type="date" id="ta-end-date">
+                    </div>
+                </div>
+                <div class="input-box">
+                    <span class="details">Resume</span>
+                    <input type="file" id="resume" required>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Register">
+            </div>
+        </form>
+        <div id="summary" style="display:none;">
+            <h2>Summary of Submission</h2>
+            <p id="summary-details"></p>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    function showTaDates() {
+        var checkBox = document.getElementById("previously-ta");
+        var taDates = document.getElementById("ta-dates");
+        if (checkBox.checked == true) {
+            taDates.style.display = "block";
+        } else {
+            taDates.style.display = "none";
+        }
+    }
+</script>
+</html>
